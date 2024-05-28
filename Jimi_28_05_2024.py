@@ -56,7 +56,7 @@ async def run1_Mondiala():
     hub.light_matrix.write("1")
     #inceput modificat
     print("Run 1 - Parte 1")
-    '''
+    
     await gyroFata(60, 1000)
     await runloop.sleep_ms(100)
     await gyroSpate(2, 400)
@@ -69,7 +69,7 @@ async def run1_Mondiala():
     hub.light.color(0, color.ORANGE)
     await runloop.until(pressPlay)
     hub.light.color(0, color.RED)
-    '''
+    
     print("Run 1 - Parte 2")
 
     await motor.run_for_degrees(hub.port.C, -10, 200)
@@ -235,7 +235,7 @@ def pressPlay():
     return (bool)(hub.button.pressed(hub.button.RIGHT) or hub.button.pressed(hub.button.LEFT))
 async def main():
     motor_pair.pair(motor_pair.PAIR_1, hub.port.B, hub.port.D)
-    await playProgram(1)
+    #await playProgram(1)
     program = 1
     hub.light_matrix.write("1")
     hub.light.color(0, color.YELLOW)
